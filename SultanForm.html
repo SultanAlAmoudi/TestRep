@@ -1,0 +1,63 @@
+<html>
+    <head><title>Entry Form</title>
+        <script type="text/javascript">
+        function validateform(){
+            var name = document.userform.Username.value;
+            if(name=="")
+            {
+            alert("Please Enter Your Name");
+            return false;
+            }
+            if(!isNaN(name))
+            {
+            alert("Username Cannot Be a number");
+            return false;
+            }
+            var pass = document.userform.Pass.value
+            if(pass=="")
+            {
+            alert("Please Enter Your Password");
+            return false;
+            }
+            if(pass.length<8 || pass.length >15)
+            {
+            alert("The password length is from 8 to 15");
+            return false;
+            }
+            if(document.userform.Gender[0].checked==false && document.userform.Gender[1].checked==false){
+                alert("Please Choose Your Gender")
+                return false;
+            }
+            if(document.userform.H1.checked==false && document.userform.H2.checked==false && document.userform.H3.checked==false){
+            alert("Please Select at least one Hobbie")
+            return false;
+            }        
+        }
+        </script>
+    </head>
+    <body>
+        <div style="width: 350px; border-style: solid; border-width: 10px;">
+            <h2>&nbsp User Entry Form</h2>
+            <form name="userform" method="post" action="SutlanForm.html" onsubmit="return validateform()" >
+                &nbsp <label for="Username">Username: </label><input type="text" name="Username"/> <br><br>
+                &nbsp <label for="Pass">Password: </label><input type="password" name="Pass"/> <br><br>
+                &nbsp <label for="Gender">Gender: </label><input type="radio" name="Gender" value="female"/> Female <input type="radio" name="Gender" value="male"/> Male <br><br>
+                &nbsp <label for="Hobbies">Hobbies: </label><input type="checkbox" name="H1" value="soccer"/> Soccer <input type="checkbox" name="H2" value="cricket"/> Cricket <input type="checkbox" name="H3" value="baseball"/> Baseball <br><br>
+                &nbsp <label for="Address">Address: </label><textarea name="Address" rows="3" cols="30" required></textarea><br><br>
+                &nbsp <label for="City">Select Your City: </label><select name="City" id="City">
+                    <option value="Jeddah">Jeddah</option>
+                    <option value="Makkah">Makkah</option>
+                    <option value="Riadh">Riadh</option>
+                    <option value="Damam">Damam</option>
+                    <option value="AL Madina">AL Madina</option>
+                </select>
+                <br><br>
+                &nbsp<input type="submit" value="submit"/><input type="reset" value="reset"/>
+              </form>
+              <div style="width: 350px; text-align: center;">
+                &copy Sultan Abdullah Alamodi 43909735</div>
+        </div>
+
+
+    </body>
+</html>
