@@ -1,63 +1,100 @@
+<!DOCTYPE html>
 <html>
-    <head><title>Entry Form</title>
-        <script type="text/javascript">
-        function validateform(){
-            var name = document.userform.Username.value;
-            if(name=="")
-            {
-            alert("Please Enter Your Name");
-            return false;
-            }
-            if(!isNaN(name))
-            {
-            alert("Username Cannot Be a number");
-            return false;
-            }
-            var pass = document.userform.Pass.value
-            if(pass=="")
-            {
-            alert("Please Enter Your Password");
-            return false;
-            }
-            if(pass.length<8 || pass.length >15)
-            {
-            alert("The password length is from 8 to 15");
-            return false;
-            }
-            if(document.userform.Gender[0].checked==false && document.userform.Gender[1].checked==false){
-                alert("Please Choose Your Gender")
-                return false;
-            }
-            if(document.userform.H1.checked==false && document.userform.H2.checked==false && document.userform.H3.checked==false){
-            alert("Please Select at least one Hobbie")
-            return false;
-            }        
-        }
-        </script>
+
+
+    <head>
+    
+        <title>
+            Homepage
+        </title>
+        
+        <link rel="stylesheet" href="style.css">
     </head>
+    <header>
+        <div class="container">
+            <div class="brand">
+                Monkeybusiness
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Mainpage.html" TARGET=_top>Homepage</a> </li>
+                    <li><a href="About.html"TARGET=_top>About </a> </li>
+                    <li><a href="Contact us.html"TARGET=_top>Contact us</a></li>
+                    <li><a href="Frameset.html"TARGET=_top>About+Contact us</a></li>
+                </ul>
+            </nav>
+         </div>
+        
+
+    </header>
+
     <body>
-        <div style="width: 350px; border-style: solid; border-width: 10px;">
-            <h2>&nbsp User Entry Form</h2>
-            <form name="userform" method="post" action="SutlanForm.html" onsubmit="return validateform()" >
-                &nbsp <label for="Username">Username: </label><input type="text" name="Username"/> <br><br>
-                &nbsp <label for="Pass">Password: </label><input type="password" name="Pass"/> <br><br>
-                &nbsp <label for="Gender">Gender: </label><input type="radio" name="Gender" value="female"/> Female <input type="radio" name="Gender" value="male"/> Male <br><br>
-                &nbsp <label for="Hobbies">Hobbies: </label><input type="checkbox" name="H1" value="soccer"/> Soccer <input type="checkbox" name="H2" value="cricket"/> Cricket <input type="checkbox" name="H3" value="baseball"/> Baseball <br><br>
-                &nbsp <label for="Address">Address: </label><textarea name="Address" rows="3" cols="30" required></textarea><br><br>
-                &nbsp <label for="City">Select Your City: </label><select name="City" id="City">
-                    <option value="Jeddah">Jeddah</option>
-                    <option value="Makkah">Makkah</option>
-                    <option value="Riadh">Riadh</option>
-                    <option value="Damam">Damam</option>
-                    <option value="AL Madina">AL Madina</option>
-                </select>
-                <br><br>
-                &nbsp<input type="submit" value="submit"/><input type="reset" value="reset"/>
-              </form>
-              <div style="width: 350px; text-align: center;">
-                &copy Sultan Abdullah Alamodi 43909735</div>
-        </div>
-
-
+        <section class="bg">
+            <div class="container">
+                <h1>Highest quality gear in the market for cheap </h1> <br> <br>
+                <p1>
+                    Great quality for cheap prices only in this amazing website  <br>
+                    <span class="smalltext">
+                        *all items are sold seperatly and cannot be refunded*
+                    </span>
+                </p1>
+                <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+            </div>
+        </section>
+    
+        <section class="sub">
+            <div class="container">
+                <h1>
+                    Subscribe for updates on this website
+                </h1>
+                <form>
+                    <input type="email" placeholder="Enter Email..."name="user-mail" id="user-mail">
+                    <button type="submit" class="sub_btn">Subscribe</button>
+                </form>
+                </div>
+            <br>
+            
+            <div class="container">
+                <p1>
+                    Reasons to join us include:
+                    <ol type="i">
+                        <li>Getting the freshest news on our website</li>
+                        <li>Being up to date with the latest trends</li>
+                        <li>Supporting Us</li>
+                    </ol>
+                </p1>
+            </div>
+                
+                
+           
+        </section>
     </body>
+
+    <footer>
+        <h1>User Testimonies</h1>
+        <div class="container">
+            <ul class="testimonial">
+                <li>
+                    <blockquote>"Great serivce 10/10"</blockquote>
+                    <cite>-Mohammed alghamdi</cite>
+                </li>
+                    
+                <li>
+                    <blockquote>"Fast Delivery!!"</blockquote>
+                    <cite>-Ahmad almalki</cite>  
+                </li>
+                   
+                <li>
+                    <blockquote>"Amazing Quality"</blockquote>
+                    <cite>-Khaled alrashdi</cite>
+                </li>
+            </ul>
+        </div>
+        <br>
+        <br>
+        <br><br><br><br><br>
+    </footer>
+ 
+
+
 </html>
